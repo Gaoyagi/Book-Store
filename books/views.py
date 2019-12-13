@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
@@ -41,9 +41,5 @@ class BookCreateView(CreateView):
       if form.is_valid():
           page = form.save()
           page.save()
-          return render(request, 'page.html', {
-            'page': page
-          })
-      return render(request, 'list.html', {
-        'pages': pages
-      })
+          return render(request, 'page.html', {'page': page})
+      return redirect("/")
