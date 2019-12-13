@@ -32,5 +32,8 @@ urlpatterns = [
     #Django Authentication
     path('accounts/', include('django.contrib.auth.urls')),
     #create a new accoint
-    path('accounts/', include('accounts.urls'))
+    path('accounts/', include('accounts.urls')),
+
+    #API rest framework
+    path('api/', include('api.urls')),
 ]
