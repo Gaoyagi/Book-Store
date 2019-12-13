@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col m-4">
+      <h3>{{ bookQuery.title }} <small class="text-muted">Last updated {{ bookQuery.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ bookQuery.author.username }}</b></small></h3>
+      <!-- <h5>Genre: {{ bookQuery.genre }}</h5> -->
+      <hr>
+      <p>{{ bookQuery.synopisis|linebreaksbr }}</p>
+      <hr>
+      <a href="{% url 'wiki-list-page' %}">Back to List</a>
+    </div>
+  </div>
+{% endblock %}
