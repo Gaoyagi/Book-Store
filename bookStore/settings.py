@@ -25,7 +25,7 @@ SECRET_KEY = '+48v=#hj=$nc&w7k8^&%3nj+0pj9hm0d&4q!z=2(xw9@vgklc$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bookscollected.herokuapp.com']
 
 
 # Application definition
